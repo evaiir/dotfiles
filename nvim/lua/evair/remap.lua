@@ -54,7 +54,7 @@ vim.keymap.set("i", "<C-a>", "->")
 
 -- Formatting.
     -- Fix indentation inside a function.
-vim.keymap.set("n", "§", "migg=G'i")
+vim.keymap.set("n", "§", "migg=G'izz")
 
 -- Yank to normal register
 vim.keymap.set("v", "<leader>y", [["+y]])
