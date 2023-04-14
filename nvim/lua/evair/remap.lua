@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>z", ":bd<CR>")
     -- Write to current file.
 vim.keymap.set("n", "<C-s>", ":w<CR>")
     -- Open this file.
-vim.keymap.set("n", "ø", ":e ~/.config/nvim/lua/zaurak/remap.lua<CR>")
+vim.keymap.set("n", "ø", ":e ~/.config/nvim/lua/evair/remap.lua<CR>")
 
 -- Move to line edges
 vim.keymap.set("i", "<A-l>", "<Esc>A")
