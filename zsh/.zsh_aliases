@@ -1,0 +1,38 @@
+# Software Handling aliases
+alias :q='exit'
+alias :w='source ~/.zshrc'
+alias nautilus='nautilus -w'
+alias PegaClasse='xprop | grep WM_CLASS'
+
+# Uni ssh shortcut
+alias ufpr='ssh ves22@ssh.c3sl.ufpr.br'
+
+# Courses aliases
+alias CI1001='cd ~/Documents/2022.2/CI1001_Programacao1/'
+alias CI1002='cd ~/Documents/2023.1/CI1002/'
+alias CI1056='cd ~/Documents/2022.2/CI1056_alg2/'
+alias CI1210='cd ~/Documents/2022.2/CI1210_Projetos/'
+
+# Git aliases
+alias gitp='git push'
+alias gitP='git pull'
+alias gita='git add'
+alias gitc='git commit -m'
+alias gits='git status'
+alias gitres='git restore'
+
+# Neovim shortcut
+alias nv='nvim'
+
+# Laziness aliases
+alias snippets='cd ~/.local/share/nvim/site/pack/packer/start/friendly-snippets/snippets'
+alias Aliases='nvim ~/.config/zsh/.zsh_aliases'
+
+# Configurations aliases
+alias zshconfig='nvim ~/.config/zsh/.zshrc'
+alias .p10kconfig='nvim ~/.config/zsh/.p10k.zsh'
+alias vimconfig='nvim ~/.config/nvim/lua/evair/'
+alias aweconfig='nvim ~/.config/awesome/rc.lua'
+alias awedirectory='cd ~/.config/awesome/'
+alias kitconfig='nvim ~/.config/kitty/kitty.conf'
+alias picconfig='nvim ~/.config/picom/picom.conf'
