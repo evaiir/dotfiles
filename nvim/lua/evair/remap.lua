@@ -21,8 +21,10 @@ vim.keymap.set("n", "ø", ":e ~/.config/nvim/lua/evair/remap.lua<CR>")
 -- Move to line edges
 vim.keymap.set("i", "<A-l>", "<Esc>A")
 vim.keymap.set("n", "<A-l>", "$")
+vim.keymap.set("v", "<A-l>", "$")
 vim.keymap.set("i", "<A-h>", "<Esc>I")
-vim.keymap.set("n", "<A-h>", "_")
+vim.keymap.set("n", "<A-h>", "^")
+vim.keymap.set("v", "<A-h>", "^")
 
 -- Move to function begin and end
 vim.keymap.set("n", "<A-k>", "?^[^ \\t#/-]<CR>")
@@ -40,10 +42,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- Register management.
     -- Substitute text without writing deleted text to the register.
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", [["_dP]])
     -- Delete without writing to the register.
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("x", "<leader>d", "\"_d")
+vim.keymap.set("n", "<leader>d", [["_d]])
+vim.keymap.set("x", "<leader>d", [["_d]])
 
 -- Black magic stuff.
     -- Replace all occurrences of a word in the file.
@@ -57,6 +59,9 @@ vim.keymap.set("n", "<leader>b", [[:%s/\(\a\) (/\1(/gc<CR>]])
 -- Writing.
     -- C pointer arrows.
 vim.keymap.set("i", "<C-a>", "->")
+    -- Cut/Delete text till parenthesis
+vim.keymap.set("n", "©", "ct)")
+vim.keymap.set("n", "ð", "dt)")
 
 -- Formatting.
     -- Fix indentation inside a function.
