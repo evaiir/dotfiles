@@ -52,3 +52,6 @@ vim.cmd [[set mouse=]]
 vim.cmd [[set encoding=utf-8]]
 vim.cmd [[set fileencoding=utf-8]]
 vim.cmd [[set virtualedit=block]]
+vim.opt.numberwidth = 3
+vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
+vim.cmd [[set signcolumn=yes:1]]

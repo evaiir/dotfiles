@@ -2,7 +2,7 @@
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
@@ -61,3 +61,17 @@ alias l='ls -CF'
 if [ -r ~/.config/zsh/.zsh_aliases ]; then
     source ~/.config/zsh/.zsh_aliases
 fi
+
+take () {
+    mkdir -p $1 && cd $1
+}
+
+comp () {
+    gcc -Wall -g $1 -o $(basename "$1" .c)
+}
+
+alias val='valgrind --leak-check=full --show-leak-kinds=all -s'
+
+vd () {
+    cd $1 && ls -a
+}

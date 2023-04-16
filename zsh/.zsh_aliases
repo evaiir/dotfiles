@@ -5,13 +5,21 @@ alias nautilus='nautilus -w'
 alias PegaClasse='xprop | grep WM_CLASS'
 
 # Uni ssh shortcut
-alias ufpr='ssh ves22@ssh.c3sl.ufpr.br'
+alias ufpr="ssh ves22@ssh.c3sl.ufpr.br 'zsh -l'"
 
 # Courses aliases
 alias CI1001='cd ~/Documents/2022.2/CI1001_Programacao1/'
 alias CI1002='cd ~/Documents/2023.1/CI1002/'
 alias CI1056='cd ~/Documents/2022.2/CI1056_alg2/'
+alias CI1057='cd ~/Documents/2023.1/CI1057/'
 alias CI1210='cd ~/Documents/2022.2/CI1210_Projetos/'
+
+# Navigation aliases
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias awedirectory='cd ~/.config/awesome/'
+alias vimdirectory='cd ~/.config/nvim/lua/evair/'
 
 # Git aliases
 alias gitp='git push'
@@ -29,10 +37,9 @@ alias snippets='cd ~/.local/share/nvim/site/pack/packer/start/friendly-snippets/
 alias Aliases='nvim ~/.config/zsh/.zsh_aliases'
 
 # Configurations aliases
-alias zshconfig='nvim ~/.config/zsh/.zshrc'
+alias .zshconfig='nvim ~/.config/zsh/.zshrc'
 alias .p10kconfig='nvim ~/.config/zsh/.p10k.zsh'
 alias vimconfig='nvim ~/.config/nvim/lua/evair/'
 alias aweconfig='nvim ~/.config/awesome/rc.lua'
-alias awedirectory='cd ~/.config/awesome/'
 alias kitconfig='nvim ~/.config/kitty/kitty.conf'
 alias picconfig='nvim ~/.config/picom/picom.conf'

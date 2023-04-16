@@ -24,6 +24,12 @@ vim.keymap.set("n", "<A-l>", "$")
 vim.keymap.set("i", "<A-h>", "<Esc>I")
 vim.keymap.set("n", "<A-h>", "_")
 
+-- Move to function begin and end
+vim.keymap.set("n", "<A-k>", "?^[^ \\t#/-]<CR>")
+vim.keymap.set("n", "<C-k>", "?[{]$<CR>")
+vim.keymap.set("n", "<C-j>", "/[{]$<CR>")
+vim.keymap.set("n", "<A-j>", "/^[^ \\t#/-]<CR>")
+
 -- Move lines up and down when in visual mode (needs better shortcut).
 vim.keymap.set("v", "L", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "H", ":m '<-2<CR>gv=gv")
