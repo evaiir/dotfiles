@@ -5,7 +5,7 @@ alias nautilus='nautilus -w'
 alias PegaClasse='xprop | grep WM_CLASS'
 
 # Uni ssh shortcut
-alias ufpr="ssh ves22@ssh.c3sl.ufpr.br 'zsh -l'"
+alias ufpr="ssh ves22@ssh.c3sl.ufpr.br"
 
 # Courses aliases
 alias CI1001='cd ~/Documents/2022.2/CI1001_Programacao1/'
