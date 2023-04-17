@@ -20,25 +20,21 @@ vim.keymap.set("n", "ø", ":e ~/.config/nvim/lua/evair/remap.lua<CR>")
 
 -- Move to line edges
 vim.keymap.set("i", "<A-l>", "<Esc>A")
-vim.keymap.set("n", "<A-l>", "$")
-vim.keymap.set("v", "<A-l>", "$")
+vim.keymap.set({"n", "v"}, "<A-l>", "$")
 vim.keymap.set("i", "<A-h>", "<Esc>I")
-vim.keymap.set("n", "<A-h>", "^")
-vim.keymap.set("v", "<A-h>", "^")
+vim.keymap.set({"n", "v"}, "<A-h>", "^")
 
 -- Move to function begin and end
-vim.keymap.set("n", "<A-k>", "?^[^ \\t#/-]<CR>")
-vim.keymap.set("n", "<C-k>", "?[{]$<CR>")
-vim.keymap.set("n", "<C-j>", "/[{]$<CR>")
-vim.keymap.set("n", "<A-j>", "/^[^ \\t#/-]<CR>")
+vim.keymap.set({"n", "v"}, "<A-k>", "?^[^ \\t#/-]<CR>")
+vim.keymap.set({"n", "v"}, "<A-j>", "/^[^ \\t#/-]<CR>")
 
 -- Move lines up and down when in visual mode (needs better shortcut).
 vim.keymap.set("v", "L", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "H", ":m '<-2<CR>gv=gv")
 
 -- Center the cursor after halfpage jumps.
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set({"n", "v"}, "<C-d>", "<C-d>zz")
+vim.keymap.set({"n", "v"}, "<C-u>", "<C-u>zz")
 
 -- Register management.
     -- Substitute text without writing deleted text to the register.
@@ -68,5 +64,7 @@ vim.keymap.set("n", "ð", "dt)")
 vim.keymap.set("n", "§", "migg=G'izz")
 
 -- Yank to normal register
-vim.keymap.set("v", "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>y", [["+y]])
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+
+-- Temp
+vim.keymap.set("i", "<C-z>", "struct tNo")
