@@ -1,35 +1,46 @@
+-- Local alias so I can type less.
 local set = vim.opt
 -- Graphic settings
     -- Best theme u w u
-set.termguicolors = true
+vim.opt.termguicolors = true
 vim.cmd.colorscheme('melange')
 vim.cmd [[set background=dark]]
-    -- Cursor configuration (not in the mood rn)
--- set.guicursor = ''
-    -- Set the column with current line number and relative numbers to that line
-set.number = true
-set.relativenumber = true
-    -- Turn off showing mode on command line as lualine already shows it
-vim.cmd [[set noshowmode]]
+    -- Transparent Background
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" } )
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" } )
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" } )
     -- Highlight current cursor position
 set.cursorline = true
 set.cursorcolumn = true
+    -- Changes current line highlight color.
 -- vim.cmd [[hi CursorLineNr guifg=#ffffff]]
     -- Highlight the 80th column for good coding visualization
 set.colorcolumn = '80'
-vim.cmd [[autocmd WinLeave * set colorcolumn=0]]
-vim.cmd [[autocmd WinEnter * set colorcolumn=+0]]
-vim.cmd [[autocmd WinLeave * set nocursorline]]
-vim.cmd [[autocmd WinEnter * set cursorline]]
-vim.cmd [[autocmd WinLeave * set nocursorcolumn]]
-vim.cmd [[autocmd WinEnter * set cursorcolumn]]
+    -- Limits text to 80 column to enforce good coding visualization.
 vim.cmd [[set textwidth=80]]
-    -- Why this isn't the default?
+    -- Turn off lines and column highlights in case of window losing focus.
+vim.cmd [[autocmd WinLeave * set colorcolumn=0]]
+vim.cmd [[autocmd WinLeave * set nocursorline]]
+vim.cmd [[autocmd WinLeave * set nocursorcolumn]]
+    -- Turn on lines and column highlights when focus is recovered.
+vim.cmd [[autocmd WinEnter * set colorcolumn=+0]]
+vim.cmd [[autocmd WinEnter * set cursorline]]
+vim.cmd [[autocmd WinEnter * set cursorcolumn]]
+    -- New windows to appear below (horizontal split) or right (vertical split)
 set.splitright = true
 set.splitbelow = true
     -- Fix the perma highlight after search
 set.hlsearch = false
+    -- Show partial results as you type the search. (Cursor not really there)
 set.incsearch = true
+    -- Turn off showing mode on command line as lualine already shows it
+vim.cmd [[set noshowmode]]
+    -- Limit for bottomline
+set.scrolloff = 8
+    -- Sets nu+rnu, also moves signcolumn to the right of them.
+set.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
+    -- Makes signcolumn always visible, also sets them to only one column
+vim.cmd [[set signcolumn=yes:1]]
 
 --
 -- Formating settings
@@ -45,17 +56,22 @@ set.smartindent = true
 set.wrap = true
     -- Bash-like completion
 vim.cmd [[set wildmode=longest,list]]
-    -- Limit for bottomline
-set.scrolloff = 8
+    -- test
+set.list = true
+vim.opt.listchars:append "space:⋅"
+vim.opt.listchars:append "eol:↴"
 
 --
--- Fuck mouse users
+-- Turn off mouse visual selection
 vim.cmd [[set mouse=]]
 
--- Testing grounds
+--
+-- File encoding
 vim.cmd [[set encoding=utf-8]]
 vim.cmd [[set fileencoding=utf-8]]
-vim.cmd [[set virtualedit=block]]
-set.numberwidth = 3
-set.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
-vim.cmd [[set signcolumn=yes:1]]
+
+--
+-- Folding
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldlevel = 999

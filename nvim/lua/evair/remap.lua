@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 -- Explorer.
-vim.keymap.set("n", "<leader>ep", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
 
 -- Buffers.
     -- Move between buffers.
@@ -68,3 +68,4 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 
 -- Temp
 vim.keymap.set("i", "<C-z>", "struct tNo")
+vim.keymap.set("n", "za", "zAzt")
