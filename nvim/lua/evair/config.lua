@@ -36,7 +36,7 @@ set.incsearch = true
     -- Turn off showing mode on command line as lualine already shows it
 vim.cmd [[set noshowmode]]
     -- Limit for bottomline
-set.scrolloff = 8
+    set.scrolloff = 5
     -- Sets nu+rnu, also moves signcolumn to the right of them.
 set.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
     -- Makes signcolumn always visible, also sets them to only one column
@@ -57,7 +57,7 @@ set.wrap = true
     -- Bash-like completion
 vim.cmd [[set wildmode=longest,list]]
     -- test
-set.list = true
+set.list = false
 vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
