@@ -11,7 +11,8 @@ vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" } )
 vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" } )
     -- Highlight current cursor position
 set.cursorline = true
-set.cursorcolumn = true
+set.nu = true
+set.rnu = true
     -- Changes current line highlight color.
 -- vim.cmd [[hi CursorLineNr guifg=#ffffff]]
     -- Highlight the 80th column for good coding visualization
@@ -38,7 +39,7 @@ vim.cmd [[set noshowmode]]
     -- Limit for bottomline
     set.scrolloff = 5
     -- Sets nu+rnu, also moves signcolumn to the right of them.
-set.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum < 10 ? v:lnum . '  ' : v:lnum) : ''}%=%s"
+vim.opt.statuscolumn = "%=%{v:virtnum < 1 ? (v:relnum ? v:relnum : v:lnum) : ''}%=%s"
     -- Makes signcolumn always visible, also sets them to only one column
 vim.cmd [[set signcolumn=yes:1]]
 
