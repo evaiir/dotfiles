@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  indentLine = {
+    loaded = true,
+    path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/indentLine",
+    url = "https://github.com/Yggdroot/indentLine"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
