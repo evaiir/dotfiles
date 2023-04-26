@@ -205,12 +205,6 @@ awful.screen.connect_for_each_screen(function(s)
         screen = s,
     })
 
-    --awful.tag.add("social", {
-    --    layout             = awful.layout.suit.fair,
-    --    master_fill_policy = "expand",
-    --    screen = s,
-    --})
-
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
 
@@ -293,7 +287,7 @@ awful.screen.connect_for_each_screen(function(s)
         screen = s,
         border_width = 2,
         border_color = beautiful.border_normal,
-        width = 1346,
+        width = 1350,
         height = 20,
         shape = function(cr, width, height)
             gears.shape.hexagon(cr, width, height)
