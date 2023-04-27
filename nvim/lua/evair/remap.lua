@@ -2,15 +2,15 @@
 vim.g.mapleader = " "
 
 -- Explorer.
-vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>e", vim.cmd.Vex)
 
 -- Buffers.
     -- Move between buffers.
-vim.keymap.set("n", "<leader>j", ":bprev<CR>")
-vim.keymap.set("n", "<A-\'>", ":bprev<CR>")
-vim.keymap.set("n", "<leader>k", ":bnext<CR>")
-vim.keymap.set("n", "<A-2>", ":bnext<CR>")
 vim.keymap.set("n", "<A-1>", ":b1<CR>")
+vim.keymap.set("n", "<leader>j", ":bprev<CR>")
+vim.keymap.set("n", "<leader>k", ":bnext<CR>")
+vim.keymap.set("n", "<A-\'>", ":bprev<CR>")
+vim.keymap.set("n", "<A-2>", ":bnext<CR>")
     -- Delete current buffer.
 vim.keymap.set("n", "<leader>z", ":bd<CR>")
     -- Write to current file.
@@ -47,7 +47,7 @@ vim.keymap.set("x", "<leader>d", [["_d]])
     -- Replace all occurrences of a word in the file.
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>//gc<Left><Left><Left>]])
     -- Replace all occurrences of a word in the line.
-vim.keymap.set("n", "ß", [[:s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
+vim.keymap.set({"n", "v"}, "ß", [[:s/\<<C-r><C-w>\>//gI<Left><Left><Left>]])
     -- Add/remove space between function definition and condition.
 vim.keymap.set("n", "<leader>a", [[:%s/\(\a\)(/\1 (/gc<CR>]])
 vim.keymap.set("n", "<leader>b", [[:%s/\(\a\) (/\1(/gc<CR>]])
