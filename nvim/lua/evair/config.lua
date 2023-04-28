@@ -17,16 +17,15 @@ set.rnu = true
 -- vim.cmd [[hi CursorLineNr guifg=#ffffff]]
     -- Highlight the 80th column for good coding visualization
 set.colorcolumn = '80'
+--vim.api.nvim_set_hl(0, "Colorcolumn", { bg = 23 } )
     -- Limits text to 80 column to enforce good coding visualization.
 vim.cmd [[set textwidth=80]]
     -- Turn off lines and column highlights in case of window losing focus.
 vim.cmd [[autocmd WinLeave * set colorcolumn=0]]
 vim.cmd [[autocmd WinLeave * set nocursorline]]
-vim.cmd [[autocmd WinLeave * set nocursorcolumn]]
     -- Turn on lines and column highlights when focus is recovered.
 vim.cmd [[autocmd WinEnter * set colorcolumn=+0]]
 vim.cmd [[autocmd WinEnter * set cursorline]]
-vim.cmd [[autocmd WinEnter * set cursorcolumn]]
     -- New windows to appear below (horizontal split) or right (vertical split)
 set.splitright = true
 set.splitbelow = true

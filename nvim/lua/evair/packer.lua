@@ -5,7 +5,6 @@ return require('packer').startup(function(use)
 
     -- Colorschemes --
     use 'savq/melange'
-    use 'bluz71/vim-moonfly-colors'
     use 'junegunn/seoul256.vim'
 
     -- Plugins --
