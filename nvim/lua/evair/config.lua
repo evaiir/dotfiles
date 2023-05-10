@@ -26,6 +26,9 @@ vim.cmd [[autocmd WinLeave * set nocursorline]]
     -- Turn on lines and column highlights when focus is recovered.
 vim.cmd [[autocmd WinEnter * set colorcolumn=+0]]
 vim.cmd [[autocmd WinEnter * set cursorline]]
+    -- Turn on lines and column highlights when buffer is created.
+vim.cmd [[autocmd BufEnter * set colorcolumn=+0]]
+vim.cmd [[autocmd BufEnter * set cursorline]]
     -- New windows to appear below (horizontal split) or right (vertical split)
 set.splitright = true
 set.splitbelow = true
