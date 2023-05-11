@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
 
             -- Autocompletion
             {'hrsh7th/nvim-cmp'},
+            {'onsails/lspkind.nvim'},
             {'hrsh7th/cmp-buffer'},
             {'hrsh7th/cmp-path'},
             {'saadparwaiz1/cmp_luasnip'},
@@ -41,9 +42,6 @@ return require('packer').startup(function(use)
         }
     }
 
-    use 'onsails/lspkind.nvim'
-
---    use 'Yggdroot/indentLine'
     use 'lukas-reineke/indent-blankline.nvim'
 
     -- Automatically set up your configuration after cloning packer.nvim
