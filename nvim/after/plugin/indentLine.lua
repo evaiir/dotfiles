@@ -6,6 +6,6 @@ require("indent_blankline").setup {
     show_trailing_blankline_indent = false,
     use_treesitter = true,
     --filetype_exclude = {},
-    --vim.api.nvim_set_hl(0, "IndentBlankLineContextChar", {fg = "#FFCCFF", bg = "none"}),
+    vim.api.nvim_set_hl(0, "IndentBlankLineContextChar", {fg = "#ebc06d", bg = "none"}),
     --vim.api.nvim_set_hl(0, "IndentBlankLineChar", {fg = "#666666", bg = "none"})
 }
