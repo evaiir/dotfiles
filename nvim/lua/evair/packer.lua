@@ -41,6 +41,8 @@ return require('packer').startup(function(use)
         }
     }
 
+    use 'onsails/lspkind.nvim'
+
 --    use 'Yggdroot/indentLine'
     use 'lukas-reineke/indent-blankline.nvim'
 
