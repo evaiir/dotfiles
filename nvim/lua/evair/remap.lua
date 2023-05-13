@@ -24,7 +24,7 @@ vim.keymap.set({"n", "v"}, "<A-l>", "$")
 vim.keymap.set("i", "<A-h>", "<Esc>I")
 vim.keymap.set({"n", "v"}, "<A-h>", "^")
 
--- Move to function begin and end
+-- Move to function start/end
 vim.keymap.set({"n", "v"}, "<A-k>", "?^[^ \\t#/-]<CR>")
 vim.keymap.set({"n", "v"}, "<A-j>", "/^[^ \\t#/-]<CR>")
 
