@@ -11,3 +11,17 @@ alias val='valgrind --leak-check=full --show-leak-kinds=all -s'
 vd () {
     cd $1 && ls -a
 }
+
+startGitPull () {
+    git init
+    git remote add origin git@github.com:$1.git
+    git pull --set-upstream origin main
+}
+
+startGit () {
+    git init
+    git add .
+    git commit -m "First Commit"
+    git remote add origin git@github.com:$1.git
+    git push --set-upstream origin main
+}
