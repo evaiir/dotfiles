@@ -10,12 +10,15 @@ return require('packer').startup(function(use)
     -- Plugins --
     use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use 'nvim-treesitter/nvim-treesitter-context'
+
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+
     use 'nvim-lualine/lualine.nvim'
     use 'nvim-tree/nvim-web-devicons'
+    use 'lukas-reineke/indent-blankline.nvim'
 
     use {"akinsho/toggleterm.nvim", tag = '*'}
 
@@ -42,12 +45,5 @@ return require('packer').startup(function(use)
         }
     }
 
-    use 'lukas-reineke/indent-blankline.nvim'
-
-    -- Automatically set up your configuration after cloning packer.nvim
-    -- Put this at the end after all plugins                            
-    if packer_bootstrap then
-        require('packer').sync()
-    end
-
+    use 'lervag/vimtex'
 end)

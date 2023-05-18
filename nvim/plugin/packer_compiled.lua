@@ -193,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
