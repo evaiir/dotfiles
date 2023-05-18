@@ -29,16 +29,17 @@ alias gitc='git commit -m'
 alias gits='git status'
 alias gitres='git restore'
 
-# Neovim shortcut
+# Apps shortcuts
 alias nv='nvim'
 alias lgsim='java -jar ~/.logisim/logisim-evolution-3.8.0-all.jar'
 
 # Laziness aliases
 alias snippets='cd ~/.local/share/nvim/site/pack/packer/start/friendly-snippets/snippets'
-alias Aliases='nvim ~/.config/zsh/.zsh_aliases'
 
 # Configurations aliases
 alias .zshconfig='nvim ~/.config/zsh/.zshrc'
+alias Aliases='nvim ~/.config/zsh/.zsh_aliases'
+alias Functions='nvim ~/.config/zsh/.zsh_functions'
 alias .p10kconfig='nvim ~/.config/zsh/.p10k.zsh'
 alias vimconfig='nvim ~/.config/nvim/lua/evair/'
 alias aweconfig='nvim ~/.config/awesome/rc.lua'
