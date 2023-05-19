@@ -13,6 +13,7 @@ alias CI1002='cd ~/Documents/2023.1/CI1002/; ls'
 alias CI1056='cd ~/Documents/2022.2/CI1056_alg2/; ls'
 alias CI1057='cd ~/Documents/2023.1/CI1057/; ls'
 alias CI1210='cd ~/Documents/2022.2/CI1210_Projetos/; ls'
+alias CI1212='cd ~/Documents/2023.1/CI1212/; ls'
 
 # Navigation aliases
 alias ...='cd ../..'
