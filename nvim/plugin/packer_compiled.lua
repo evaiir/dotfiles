@@ -104,11 +104,6 @@ _G.packer_plugins = {
     path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["friendly-snippets"] = {
-    loaded = true,
-    path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/friendly-snippets",
-    url = "https://github.com/rafamadriz/friendly-snippets"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/zaurak/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
