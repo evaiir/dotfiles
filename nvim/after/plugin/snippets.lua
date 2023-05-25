@@ -12,5 +12,3 @@ local ms = ls.multi_snippet
 local fmt = require("luasnip.extras.fmt").fmt
 
 require("luasnip.loaders.from_lua").lazy_load { paths = "~/.config/nvim/after/snippets/" }
-require("luasnip/loaders/from_vscode").lazy_load()
-require("luasnip/loaders/from_vscode").load({ paths = {"/home/zaurak/.config/nvim/after/snippets/" } })
