@@ -69,7 +69,7 @@ return {
     },
     {
         t("if(! ("), i(1, "ptr"), t(" = malloc(sizeof("), i(2, "int"),
-        t("))))"), t({ "", "\treturn " }), i(0, "NULL"), t(";"),
+        t("))))"), t({ "", "\treturn " }), i(3, "NULL"), t(";"),
     }),
 
     s({
@@ -78,6 +78,39 @@ return {
     },
     {
         t("if(! ("), i(1, "ptr"), t(" = calloc("), i(2, "1"), t(", sizeof("),
-        i(3, "int"), t("))))"), t({ "", "\treturn " }), i(0, "NULL"), t(";"),
+        i(3, "int"), t("))))"), t({ "", "\treturn " }), i(4, "NULL"), t(";"),
+    }),
+
+    s({
+        trig = "#inc",
+        dscr = "Include a <library>",
+        priority = 2000,
+    },
+    {
+        t("#include <"), i(1, "stdio.h"), t(">"),
+    }),
+
+    s({
+        trig = "#inc",
+        dscr = "Include a \"library\"",
+    },
+    {
+        t("#include \""), i(1, "mylib.h"), t("\""),
+    }),
+
+    s({
+        trig = "null",
+        dscr = "Writes NULL in full caps.",
+    },
+    {
+        t("NULL"),
+    }),
+
+    s({
+        trig = "return",
+        dscr = "Prepare a return value.",
+    },
+    {
+        t("return "), i(1, "NULL"), t(";"),
     }),
 }
