@@ -113,4 +113,20 @@ return {
     {
         t("return "), i(1, "NULL"), t(";"),
     }),
+
+    s({
+        trig = "pri",
+        dscr = "Generic printf",
+    },
+    {
+        t("printf(\""), i(1, "text"), t("\\n\""), i(2), t(");"),
+    }),
+
+    s({
+        trig = "fpri",
+        dscr = "Generic fprintf",
+    },
+    {
+        t("fprintf("), i(1, "stderr"), t(", \""), i(2, "text"), t("\\n\""), i(3), t(");"),
+    }),
 }
