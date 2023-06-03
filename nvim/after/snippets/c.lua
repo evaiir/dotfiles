@@ -83,19 +83,19 @@ return {
 
     s({
         trig = "#inc",
+        dscr = "Include a \"library\"",
+    },
+    {
+        t("#include \""), i(1, "mylib.h"), t("\""),
+    }),
+
+    s({
+        trig = "#inc",
         dscr = "Include a <library>",
         priority = 2000,
     },
     {
         t("#include <"), i(1, "stdio.h"), t(">"),
-    }),
-
-    s({
-        trig = "#inc",
-        dscr = "Include a \"library\"",
-    },
-    {
-        t("#include \""), i(1, "mylib.h"), t("\""),
     }),
 
     s({
