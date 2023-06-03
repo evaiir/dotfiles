@@ -61,8 +61,7 @@ set.wrap = true
 vim.cmd [[set wildmode=longest,list]]
     -- test
 set.list = false
-vim.opt.listchars:append "space:⋅"
-vim.opt.listchars:append "eol:↴"
+vim.opt.listchars:append "lead:⋅"
 
 --
 -- Turn off mouse visual selection
