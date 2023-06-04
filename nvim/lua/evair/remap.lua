@@ -66,11 +66,13 @@ vim.keymap.set("n", "§", "migg=G'izz")
 -- Yank to normal register
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 
--- Temp
+-- Folding remaps
 vim.keymap.set("n", "za", "zAzt")
 vim.keymap.set("n", "zr", "zR")
 vim.keymap.set("n", "zR", "zr")
 vim.keymap.set("n", "zm", "zM")
 vim.keymap.set("n", "zM", "zm")
-vim.keymap.set("i", "<C-z>", "struct tNo")
-vim.keymap.set("i", "<C-x>", "struct tArvore")
+
+-- Testing grounds
+vim.keymap.set({"n", "v"}, "j", [[v:count ? (v:count >=3 ? "m'" . v:count : "") . "j" : "j"]], { expr = true })
+vim.keymap.set({"n", "v"}, "k", [[v:count ? (v:count >= 3 ? "m'" . v:count : "") . "k" : "k"]], { expr = true })
