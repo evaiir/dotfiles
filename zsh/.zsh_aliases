@@ -35,7 +35,7 @@ alias nv='nvim'
 alias lgsim='java -jar ~/.logisim/logisim-evolution-3.8.0-all.jar'
 
 # Laziness aliases
-alias snippets='cd ~/.local/share/nvim/site/pack/packer/start/friendly-snippets/snippets'
+alias snippets='vd ~/.config/nvim/after/snippets/'
 
 # Configurations aliases
 alias .zshconfig='nvim ~/.config/zsh/.zshrc'
