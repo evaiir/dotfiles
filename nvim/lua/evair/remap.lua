@@ -1,5 +1,8 @@
--- Set leader key to space key.
+-- Set space key as leader key.
+vim.keymap.set("n", "<Space>", "<NOP>")
 vim.g.mapleader = " "
+-- Set \ key as local leader key.
+vim.g.maplocalleader = "\"
 
 -- Explorer.
 vim.keymap.set("n", "<leader>e", vim.cmd.Vex)
@@ -17,6 +20,7 @@ vim.keymap.set("n", "<leader>z", ":bd<CR>")
 vim.keymap.set("n", "<C-s>", ":w<CR>")
     -- Open this file.
 vim.keymap.set("n", "ø", ":e ~/.config/nvim/lua/evair/remap.lua<CR>")
+vim.keymap.set("n", "þ", ":e ~/.config/nvim/after/snippets/<CR>")
 
 -- Move to line edges
 vim.keymap.set("i", "<A-l>", "<Esc>A")
@@ -73,6 +77,6 @@ vim.keymap.set("n", "zR", "zr")
 vim.keymap.set("n", "zm", "zM")
 vim.keymap.set("n", "zM", "zm")
 
--- Testing grounds
+-- Make J and K part of jumplist
 vim.keymap.set({"n", "v"}, "j", [[v:count ? (v:count >=3 ? "m'" . v:count : "") . "j" : "j"]], { expr = true })
 vim.keymap.set({"n", "v"}, "k", [[v:count ? (v:count >= 3 ? "m'" . v:count : "") . "k" : "k"]], { expr = true })
