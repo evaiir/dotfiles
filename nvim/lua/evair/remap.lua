@@ -1,8 +1,9 @@
 -- Set space key as leader key.
 vim.keymap.set("n", "<Space>", "<NOP>")
 vim.g.mapleader = " "
+
 -- Set \ key as local leader key.
-vim.g.maplocalleader = "\"
+vim.cmd [[let maplocalleader = '\']]
 
 -- Explorer.
 vim.keymap.set("n", "<leader>e", vim.cmd.Vex)
