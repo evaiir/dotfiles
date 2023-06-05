@@ -129,4 +129,15 @@ return {
     {
         t("fprintf("), i(1, "stderr"), t(", \""), i(2, "text"), t("\\n\""), i(3), t(");"),
     }),
+
+    s({
+        trig = "ifndef",
+        dscr = "Inclusion guard",
+    },
+    {
+        t("#ifndef __"), i(1, "GUARD"),
+        t({"", "#define __"}), rep(1),
+        t({"", ""}), i(0),
+        t({"", "#endif"}),
+    }),
 }
