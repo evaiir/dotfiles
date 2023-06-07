@@ -1,15 +1,5 @@
 return {
     s({
-        trig = "sst",
-        dscr = "Standard code starter",
-    },
-    {
-        t({ "#include <stdio.h>", "#include <stdlib.h>", "" }),
-        t({ "", "int main(int argc, char *argv[]) {", "\t" }), i(0),
-        t({ "", "", "\treturn 0;", "}" }),
-    }),
-
-    s({
         trig = "cmt",
         dscr = "Simple comment block",
     },
@@ -79,23 +69,6 @@ return {
     {
         t("if(! ("), i(1, "ptr"), t(" = calloc("), i(2, "1"), t(", sizeof("),
         i(3, "int"), t("))))"), t({ "", "\treturn " }), i(4, "NULL"), t(";"),
-    }),
-
-    s({
-        trig = "#inc",
-        dscr = "Include a \"library\"",
-    },
-    {
-        t("#include \""), i(1, "mylib.h"), t("\""),
-    }),
-
-    s({
-        trig = "#inc",
-        dscr = "Include a <library>",
-        priority = 2000,
-    },
-    {
-        t("#include <"), i(1, "stdio.h"), t(">"),
     }),
 
     s({
