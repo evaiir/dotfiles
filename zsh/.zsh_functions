@@ -25,3 +25,13 @@ startGit () {
     git remote add origin git@github.com:evaiir/$1.git
     git push --set-upstream origin main
 }
+
+import_git () {
+    cd ~/.config
+    git pull
+    CI1002
+    git pull
+    CI1057
+    git pull
+    cd
+}
