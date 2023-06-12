@@ -59,7 +59,9 @@ return {
     },
     {
         t("if(! ("), i(1, "ptr"), t(" = malloc(sizeof("), i(2, "int"),
-        t("))))"), t({ "", "\treturn " }), i(3, "NULL"), t(";"),
+        t(")))) {"),
+        t({ "", "\tfprintf(stderr, \"Erro ao alocar memória\");", "\treturn " }),
+        i(3, "NULL"), t({ ";", "}" }),
     }),
 
     s({
@@ -68,7 +70,9 @@ return {
     },
     {
         t("if(! ("), i(1, "ptr"), t(" = calloc("), i(2, "1"), t(", sizeof("),
-        i(3, "int"), t("))))"), t({ "", "\treturn " }), i(4, "NULL"), t(";"),
+        i(3, "int"), t(")))) {"), 
+        t({ "", "\tfprintf(stderr, \"Erro ao alocar memória\");", "\treturn " }),
+        i(4, "NULL"), t({ ";", "}" }),
     }),
 
     s({
