@@ -19,5 +19,13 @@ return {
         t(" = NULL;"),
     }),
 
-    --TODO: fread, fwrite, fclose (autotrigger, maybe?), move fprintf here
+    s({
+        trig = "fpri",
+        dscr = "Generic fprintf",
+    },
+    {
+        t("fprintf("), i(1, "stderr"), t(", \""), i(2, "text"), t("\\n\""), i(3), t(");"),
+    }),
+
+    --TODO: fread, fwrite, fclose (autotrigger, maybe?)
 }
