@@ -81,3 +81,6 @@ vim.keymap.set("n", "zM", "zm")
 -- Make J and K part of jumplist
 vim.keymap.set({"n", "v"}, "j", [[v:count ? (v:count >=3 ? "m'" . v:count : "") . "j" : "j"]], { expr = true })
 vim.keymap.set({"n", "v"}, "k", [[v:count ? (v:count >= 3 ? "m'" . v:count : "") . "k" : "k"]], { expr = true })
+
+-- Temp
+vim.keymap.set("i", "<C-z>", "struct file_header_t")
