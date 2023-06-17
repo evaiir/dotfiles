@@ -9,4 +9,37 @@ return {
         t({"", ""}), i(0),
         t({"", "#endif"}),
     }),
+
+    s({
+        trig = "sls1",
+        dscr = "Standard libraries loader.",
+    },
+    {
+        t({ "#include <stdio.h>", "#include <stdlib.h>" }), 
+    }),
+
+    s({
+        trig = "#inca",
+        dscr = "Include a \"library\".",
+    },
+    {
+        t("#include \""), i(1, "mylib.h"), t("\""),
+    }),
+
+    s({
+        trig = "#incb",
+        dscr = "Include a <library>.",
+        priority = 2000,
+    },
+    {
+        t("#include <"), i(1, "stdio.h"), t(">"),
+    }),
+
+    s({
+        trig = "#def",
+        dscr = "Define a MACRO.",
+    },
+    {
+        t("#define "), i(1),
+    }),
 }
