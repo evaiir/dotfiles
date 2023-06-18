@@ -40,7 +40,7 @@ require('lualine').setup {
             -- 2: Shows buffer name + buffer index
             -- 3: Shows buffer number
             -- 4: Shows buffer name + buffer number
-            max_length = vim.o.columns * 2 / 3, -- Maximum width of buffers component,
+            max_length = vim.o.columns * 6 / 7, -- Maximum width of buffers component,
             -- it can also be a function that returns
             -- the value of `max_length` dynamically.
             filetype_names = {
