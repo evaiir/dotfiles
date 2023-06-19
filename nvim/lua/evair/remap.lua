@@ -84,3 +84,4 @@ vim.keymap.set({"n", "v"}, "k", [[v:count ? (v:count >= 3 ? "m'" . v:count : "")
 
 -- Temp
 vim.keymap.set("i", "<C-z>", "struct file_header_t")
+vim.keymap.set("i", "<C-x>", "struct list_t")
