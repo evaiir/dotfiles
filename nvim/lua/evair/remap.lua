@@ -33,6 +33,10 @@ vim.keymap.set({"n", "v"}, "<A-h>", "^")
 vim.keymap.set({"n", "v"}, "<A-e>", "ge")
 vim.keymap.set({"n", "v"}, "<A-E>", "gE")
 
+-- Move to start/end of last visual selection
+vim.keymap.set("n", "<C-,>", "'<")
+vim.keymap.set("n", "<C-.>", "'>")
+
 -- Move to function start/end
 vim.keymap.set({"n", "v"}, "<A-k>", "?^[^ \\t#/-]<CR>")
 vim.keymap.set({"n", "v"}, "<A-j>", "/^[^ \\t#/-]<CR>")
