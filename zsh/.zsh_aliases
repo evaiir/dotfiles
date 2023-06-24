@@ -33,6 +33,7 @@ alias gitres='git restore'
 # Apps shortcuts
 alias nv='nvim'
 alias lgsim='java -jar ~/.logisim/logisim-evolution-3.8.0-all.jar'
+alias py3='python3.11'
 
 # Laziness aliases
 alias snippets='vd ~/.config/nvim/after/snippets/'

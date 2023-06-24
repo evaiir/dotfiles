@@ -29,6 +29,10 @@ vim.keymap.set({"n", "v"}, "<A-l>", "$")
 vim.keymap.set("i", "<A-h>", "<Esc>I")
 vim.keymap.set({"n", "v"}, "<A-h>", "^")
 
+-- Move to end of previous word
+vim.keymap.set({"n", "v"}, "<A-e>", "ge")
+vim.keymap.set({"n", "v"}, "<A-E>", "gE")
+
 -- Move to function start/end
 vim.keymap.set({"n", "v"}, "<A-k>", "?^[^ \\t#/-]<CR>")
 vim.keymap.set({"n", "v"}, "<A-j>", "/^[^ \\t#/-]<CR>")
@@ -59,10 +63,12 @@ vim.keymap.set("n", "<leader>b", [[:%s/\(\a\) (/\1(/gc<CR>]])
 
 -- Writing.
     -- C pointer arrows.
-vim.keymap.set("i", "<C-a>", "->")
+vim.keymap.set({"i", "t"}, "<C-a>", "->")
     -- Cut/Delete text till parenthesis
 vim.keymap.set("n", "©", "ct)")
 vim.keymap.set("n", "ð", "dt)")
+    -- Cut text till underscore
+vim.keymap.set("n", "<C-c>", "ct_")
 
 -- Formatting.
     -- Fix indentation inside a function.

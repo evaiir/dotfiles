@@ -9,4 +9,13 @@ return {
         t({ '', '\tdscr = "' }), i(2, "description"), t('",'),
         t({ '', '},', '{', '\t' }), i(0, "snippet"), t({ '', '}),' }),
     }),
+
+    s({
+        trig = "kmp",
+        dscr = "Prepare a keymap",
+    },
+    {
+        t("vim.keymap.set(\""), i(1, "n"), t("\", \""), i(2, "<Shortcut>"),
+        t("\", \""), i(3, "<Command>"), t("\")"),
+    }),
 }

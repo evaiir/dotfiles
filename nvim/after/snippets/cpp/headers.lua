@@ -42,4 +42,20 @@ return {
     {
         t("#define "), i(1),
     }),
+
+    s({
+        trig = "cmt",
+        dscr = "Simple comment block",
+    },
+    {
+        t("/* "), i(0), t(" */"),
+    }),
+
+    s({
+        trig = "lcmt",
+        dscr = "Long comment block",
+    },
+    {
+        t({ "/*", " * " }), i(0), t({ "", " */" }),
+    }),
 }
